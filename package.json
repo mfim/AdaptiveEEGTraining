@@ -4,14 +4,18 @@
   "version": "0.1.0",
   "private": true,
   "node-main": "main.js",
+  "scripts":{
+	  "start": "nw"
+  },
   "window": {
     "toolbar": true
-  },	
+  },
   "dependencies": {
     "browserify": "^14.5.0",
     "cylon": "~1.2.0",
     "cylon-mindflex": "file:./cylon-mindflex",
-    "node-pid-controller": "0.1.2"
+    "node-pid-controller": "0.1.2",
+    "nw": "^0.26.6"
   },
   "webkit": {
     "plugin": true
