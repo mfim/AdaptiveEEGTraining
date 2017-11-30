@@ -125,9 +125,9 @@ function start() {
   } else {
     var adapter = new Adapter(port);
   }
-
+ 
   adapter.once("packet", function(data) {
-    starter.startNewSession(JSON.stringify(json));
+	starter.startNewSession(JSON.stringify(json));
   })
   dataReceiver.setAdapter(adapter);
   adapter.init();

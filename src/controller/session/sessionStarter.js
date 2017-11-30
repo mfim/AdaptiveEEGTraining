@@ -21,7 +21,6 @@ exports.startNewSession = function(json) {
 
     //Instantiation of View
     view = new View();
-    
     //Listeners adding
     receiver.addNewListener(view.updateGraph);
     receiver.addNewListener(dataManager.addPacket);
@@ -32,7 +31,7 @@ exports.startNewSession = function(json) {
     dataManager.initializeAbiliaDb();
     dataManager.setDateStart(Date.now());
     receiver.startReceiving();
-    
+	
     newTask(0);
  
 }
