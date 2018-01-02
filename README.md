@@ -26,7 +26,7 @@ Run the server separately with the project in a new terminal.
 
 First - npm install
 
-Then - node index (to run the server)
+Then - nodemon index (to run the server)
 
 The server is supported by mongoDB,  maksure the mongoDB is working properly. 
 
