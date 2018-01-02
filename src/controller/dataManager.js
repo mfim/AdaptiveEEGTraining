@@ -42,22 +42,24 @@ exports.save = function(){
     
     
     //TODO: Call Abilia DB
-     console.log("start dbinitial");
-    var dbInitializer = {
-                            
-    attentionLevels: "",
-    relaxationLevels:"",
-    timestamps:""
-    };
+   //  console.log("start dbinitial");
+    /*var dbInitializer = {                   
+    "patientID": ""
+    };*/
     
-    console.log("end dbinitial");
+    //console.log("end dbinitial");
+  //  dbInitializer.patientID = $("#patientID").val();
     
     
+    var dbInitializer = '{'+'"patientID":"'+$("#patientID").val()+'"'+'}';
+    
+  // $.post("http://localhost:4000/api/data", dbInitializer, function(data) { 
     $.ajax({
         type: "POST",
         url: "http://localhost:4000/api/data",          
         data: dbInitializer,
         dataType: "json",
+        contentType: "application/json",
         success: function() {
             var dataLogJSON = dataLog.createJSON();
             $.ajax({
