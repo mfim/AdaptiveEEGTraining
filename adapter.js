@@ -19,15 +19,15 @@ var Adapter = module.exports = function Adapter(port) {
     },
     work: function(my) {
         my.headset.on("allComputedPacket", function(packet) {
-          //if (packet.hasOwnProperty("signal")) {
-            //if (packet.signal === 0) {
+          if (packet.hasOwnProperty("signal")) {
+            if (packet.signal === 0) {
 			  console.log("a packet arrived and was emited, yey!")
               self.emit("packet", packet);
-            //} else {
-			  //console.log("what a nasty packet this one!");
-             // self.emit("lowSignalPacket");
-            //}
-          //} 
+            } else {
+			  console.log("what a nasty packet this one!");
+              self.emit("lowSignalPacket");
+            }
+          } 
         });
     }
 	});

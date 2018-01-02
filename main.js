@@ -1,10 +1,11 @@
 var Adapter = require("./adapter.js");
 var dataReceiver = require("./src/controller/headsetReceiver/dataReceiver");
 var starter = require('./src/controller/session/sessionStarter');
-var Dummy = require("./Dummy.js")
+var Dummy = require("./Dummy.js");
 var json;
 var port;
 var dummyBool;
+
 
 //Add listener to all the elements of the page: form submit, file inserting, port selection.
 document.addEventListener('DOMContentLoaded', function() {
@@ -71,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Check input and start the application.
 function startApplication() {
+    
+ // var db = mongoose.connect(DBURI);
 
   //chechk if JSON was inserted or loaded.
   if (json == undefined) {
@@ -118,6 +121,7 @@ function startApplication() {
 
 //initialize applciation.
 function start() {
+    
   console.log("Launching application");
 
   if (dummyBool == true) {

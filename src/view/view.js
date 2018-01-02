@@ -247,12 +247,16 @@ View.prototype.setLights = function( lightsColor, lightIntensity, isFollow ){
     
         var json = '{"Action":"LightCommand", "Color":"' + lightsColor + '", "Brightness":"' + parseInt(lightIntensity) + '"}';
 
+        
+        console.log(json);
         $.ajax({
             type: "POST",
             url: "http://localhost:7070",
             data: json,
             dataType: "json"
         });
+        
+        
     }
     
 }

@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "node-main": "main.js",
-  "scripts":{
-	  "start": "nw"
+  "scripts": {
+    "start": "nw"
   },
   "window": {
     "toolbar": true
@@ -14,6 +14,8 @@
     "browserify": "^14.5.0",
     "cylon": "~1.2.0",
     "cylon-mindflex": "file:./cylon-mindflex",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.6",
     "node-pid-controller": "0.1.2",
     "nw": "^0.26.6"
   },

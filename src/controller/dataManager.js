@@ -33,45 +33,55 @@ exports.addAction =
 
 /* Save log to storage */
 exports.save = function(){
-    console.log(JSON.parse(dataLog.createJSON()));
+   // console.log(JSON.parse(dataLog.createJSON()));
+    //console.log(JSON.parse(dataLog.createJSON()).attentionLevels);
+   // console.log(dataLog.createJSON());
     console.log(JSON.parse(actionLog.createJSON()));
     console.log("Date start: " + dateStart);
     console.log("Date end: " + dateEnd);
     
+    
     //TODO: Call Abilia DB
-    /*
-    var dbInitializer = '{"idTherapeuticCenter": "' + idTherapeuticCenter + '","idActivity": "'+ idActivity + '","idChild": "' + idChild + '","idTherapist": "' + idTherapist + '","idParent": "' + idParent + '","notes": "' + notes + '","rating": "' + rating + '","fieldList": {"timestamp":"DATETIME","attention": "INT(10)","relaxation": "INT(3)",“label”: “VARCHAR(32)”,"action": "VARCHAR(32)",“intensity”: “FLOAT”,“color”:”VARCHAR(32)”,“path”:”VARCHAR(100)”},"dateStart": "' + dateStart + '","dateEnd": "' + dateEnd + '","outcome": "' + outcome + '"}';
+     console.log("start dbinitial");
+    var dbInitializer = {
+                            
+    attentionLevels: "",
+    relaxationLevels:"",
+    timestamps:""
+    };
+    
+    console.log("end dbinitial");
+    
     
     $.ajax({
         type: "POST",
-        url: "url",             <---- INSERIRE URL SERVER --->
+        url: "http://localhost:4000/api/data",          
         data: dbInitializer,
         dataType: "json",
         success: function() {
-    
             var dataLogJSON = dataLog.createJSON();
-
             $.ajax({
                 type: "POST",
-                url: "url",             <---- INSERIRE URL SERVER --->
+                url: "http://localhost:4000/api/data",           
                 data: dataLogJSON,
-                dataType: "json"
+                dataType: "json",
+                contentType: "application/json"
             });
 
             var actionLogJSON = actionLog.createJSON();
 
             $.ajax({
                 type: "POST",
-                url: "url",             <---- INSERIRE URL SERVER --->
+                url: "http://localhost:4000/api/action",            
                 data: actionLogJSON,
-                dataType: "json"
+                dataType: "json",
+                contentType: "application/json"
             });
-        1},
+        },
         error: function(request,error){
             console.log("Error");
         }
     });
-    */
 
 }
 
