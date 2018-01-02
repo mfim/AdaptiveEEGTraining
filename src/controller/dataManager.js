@@ -51,24 +51,24 @@ exports.save = function(){
   //  dbInitializer.patientID = $("#patientID").val();
     
     
-    var dbInitializer = '{'+'"patientID":"'+$("#patientID").val()+'"'+'}';
-    
+   // var dbInitializer = '{'+'"patientID":"'+$("#patientID").val()+'"'+'}';
+    var dataLogJSON = dataLog.createJSON();
   // $.post("http://localhost:4000/api/data", dbInitializer, function(data) { 
     $.ajax({
         type: "POST",
         url: "http://localhost:4000/api/data",          
-        data: dbInitializer,
+        data: dataLogJSON,
         dataType: "json",
         contentType: "application/json",
         success: function() {
-            var dataLogJSON = dataLog.createJSON();
+            /*var dataLogJSON = dataLog.createJSON();
             $.ajax({
                 type: "POST",
                 url: "http://localhost:4000/api/data",           
                 data: dataLogJSON,
                 dataType: "json",
                 contentType: "application/json"
-            });
+            });*/
 
             var actionLogJSON = actionLog.createJSON();
 
