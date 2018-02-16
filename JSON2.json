@@ -12,8 +12,8 @@
                "0":{  
                   "label":"light",
                   "intensity":"100",
-                   "color":"#0000ff",
-                   "responsive_function":"pid"
+                   "color":"#ff0000",
+                   "responsive_function":"quadratic"
                }
             }
          },
@@ -36,7 +36,7 @@
       ],
       "options":{  
          "device":"pc",
-          "timeout":"120"
+          "timeout":"180"
       }
    }
 ]
