@@ -12,7 +12,7 @@
                "0":{  
                   "label":"light",
                   "intensity":"100",
-                   "color":"#0000ff",
+                   "color":"#ff0000",
                    "responsive_function":"pid"
                }
             }
@@ -36,7 +36,7 @@
       ],
       "options":{  
          "device":"pc",
-          "timeout":"120"
+          "timeout":"180"
       }
    }
 ]

@@ -23,7 +23,7 @@ exports.startNewSession = function(json) {
     view = new View();
     //Listeners adding
     receiver.addNewListener(view.updateGraph);
-    receiver.addNewListener(dataManager.addPacket);
+    receiver.addNewListener(dataManager.addPacket); //package data 
     receiver.addNewSessionListener(nextTask);
     
     JSONTask = JSON.parse(json);
