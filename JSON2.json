@@ -13,7 +13,7 @@
                   "label":"light",
                   "intensity":"100",
                    "color":"#ff0000",
-                   "responsive_function":"quadratic"
+                   "responsive_function":"pid"
                }
             }
          },
