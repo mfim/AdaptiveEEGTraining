@@ -245,8 +245,12 @@ View.prototype.setLights = function( lightsColor, lightIntensity, isFollow ){
         console.log("LIGHTS ON");
         counter = 0;
     
+<<<<<<< HEAD
         var json = '{"Action":"LightCommand", "Color":"' + lightsColor + '", "Brightness":"' + parseInt(lightIntensity) + '"}';
         //var json = '{"Action":"LightCommand", "Color":"#0000FF", "Brightness":"' + parseInt(lightIntensity) + '"}';
+=======
+        var json = '{"Action":"LightCommand", "Color":"' + lightsColor + '", "Brightness":"' + parseInt(lightIntensity*255/100) + '"}';
+>>>>>>> 6f80f170bb0b7173066e3e78d26b3fb8b5946e57
 
         
         console.log(json);
